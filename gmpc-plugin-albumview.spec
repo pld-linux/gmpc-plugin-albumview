@@ -2,7 +2,7 @@
 Summary:	Album view plugin for Gnome Music Player Client
 Name:		gmpc-plugin-albumview
 Version:	0.20.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://downloads.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
@@ -52,45 +52,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/gmpc/plugins/*.so
-
-%dir %{_datadir}/gmpc-albumview
-%dir %{_datadir}/gmpc-albumview/icons/Humanity/16x16/apps
-%dir %{_datadir}/gmpc-albumview/icons/Humanity/22x22/apps
-%dir %{_datadir}/gmpc-albumview/icons/Humanity/24x24/apps
-%dir %{_datadir}/gmpc-albumview/icons/Humanity/32x32/apps
-%dir %{_datadir}/gmpc-albumview/icons/Humanity/48x48/apps
-%dir %{_datadir}/gmpc-albumview/icons/Humanity/64x64/apps
-%dir %{_datadir}/gmpc-albumview/icons/Humanity/72x72/apps
-%dir %{_datadir}/gmpc-albumview/icons/Humanity/96x96/apps
-%dir %{_datadir}/gmpc-albumview/icons/Humanity/scalable/apps
-%dir %{_datadir}/gmpc-albumview/icons/hicolor/128x128/apps
-%dir %{_datadir}/gmpc-albumview/icons/hicolor/16x16/apps
-%dir %{_datadir}/gmpc-albumview/icons/hicolor/22x22/apps
-%dir %{_datadir}/gmpc-albumview/icons/hicolor/24x24/apps
-%dir %{_datadir}/gmpc-albumview/icons/hicolor/32x32/apps
-%dir %{_datadir}/gmpc-albumview/icons/hicolor/48x48/apps
-%dir %{_datadir}/gmpc-albumview/icons/hicolor/64x64/apps
-%dir %{_datadir}/gmpc-albumview/icons/hicolor/72x72/apps
-%dir %{_datadir}/gmpc-albumview/icons/hicolor/96x96/apps
-%dir %{_datadir}/gmpc-albumview/icons/hicolor/scalable/apps
-
-%{_datadir}/gmpc-albumview/icons/Humanity/16x16/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/Humanity/22x22/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/Humanity/24x24/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/Humanity/32x32/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/Humanity/48x48/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/Humanity/64x64/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/Humanity/72x72/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/Humanity/96x96/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/Humanity/scalable/apps/albumview.svg
-%{_datadir}/gmpc-albumview/icons/hicolor/128x128/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/hicolor/16x16/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/hicolor/22x22/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/hicolor/24x24/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/hicolor/32x32/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/hicolor/48x48/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/hicolor/64x64/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/hicolor/72x72/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/hicolor/96x96/apps/albumview.png
-%{_datadir}/gmpc-albumview/icons/hicolor/scalable/apps/albumview.svg
+%attr(755,root,root) %{_libdir}/gmpc/plugins/albumviewplugin.so
+%{_datadir}/gmpc-albumview
