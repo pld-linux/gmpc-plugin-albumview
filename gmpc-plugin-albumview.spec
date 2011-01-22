@@ -10,16 +10,19 @@ Source0:	http://downloads.sourceforge.net/musicpd/%{source_name}-%{version}.tar.
 URL:		http://gmpc.wikia.com/wiki/GMPC_PLUGIN_ALBUMVIEW
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 2.10
 BuildRequires:	gmpc-devel >= 0.19.2
 BuildRequires:	gtk+2-devel >= 2:2.8
+BuildRequires:	intltool
 BuildRequires:	libmpd-devel >= 0.18.100
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This GMPC plugin shows your music collection in albums, it's showing album
-covers with the artist and album name under it.
+This GMPC plugin shows your music collection in albums, it's showing
+album covers with the artist and album name under it.
 
 You can also filter out specific artists or albums and set the amount
 of albums per row.
