@@ -1,12 +1,12 @@
 %define		source_name gmpc-albumview
 Summary:	Album view plugin for Gnome Music Player Client
 Name:		gmpc-plugin-albumview
-Version:	0.20.0
-Release:	2
+Version:	11.8.16
+Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://downloads.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
-# Source0-md5:	8e2b0f3e0084fcf4844bef43de217a9e
+Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{source_name}-%{version}.tar.gz
+# Source0-md5:	e7a587729561dceab4596adf7ed835e1
 URL:		http://gmpc.wikia.com/wiki/GMPC_PLUGIN_ALBUMVIEW
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -42,13 +42,10 @@ of albums per row.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT%{_libdir}/gmpc
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm $RPM_BUILD_ROOT%{_libdir}/gmpc/plugins/*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/gmpc/plugins/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
